@@ -17,7 +17,8 @@ public class Book {
 	/**
 	 * @return the id
 	 */
-	
+	@Id
+        @GeneratedValue(strategy = GenerationType.AUTO)
 	public Long getId() {
 		return id;
 	}
@@ -30,6 +31,7 @@ public class Book {
 	/**
 	 * @return the name
 	 */
+        @Column(nullable = false,length = 50)
 	public String getName() {
 		return name;
 	}
@@ -42,6 +44,7 @@ public class Book {
 	/**
 	 * @return the code
 	 */
+        @Column(nullable = false,length = 50)
 	public String getCode() {
 		return code;
 	}
@@ -54,6 +57,7 @@ public class Book {
 	/**
 	 * @return the price
 	 */
+        @Column(nullable = false,length = 10)
 	public String getPrice() {
 		return price;
 	}
@@ -66,6 +70,7 @@ public class Book {
 	/**
 	 * @return the author
 	 */
+        @Column(nullable = false,length = 50)
 	public String getAuthor() {
 		return author;
 	}
@@ -78,6 +83,7 @@ public class Book {
 	/**
 	 * @return the isbn
 	 */
+        @Column(nullable = false,length = 50)
 	public String getIsbn() {
 		return isbn;
 	}
@@ -106,7 +112,7 @@ public class Book {
 		return publishedOn;
 	}
 	/**
-	 * @param publishedOne the publishedOn to set
+	 * @param publishedOn the publishedOn to set
 	 */
 	public void setPublishedOne(Date publishedOn) {
 		this.publishedOn = publishedOn;
