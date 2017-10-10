@@ -13,7 +13,8 @@ Thành viên:
 * [X] Spring framework.
 * [X] Kết nối cơ sở dữ liệu mySQL.
 * [X] Hibernate (ORM).
-* [X] Bootstrap (Layout). (**MSSV**)
+* [X] Bootstrap (Layout)
+* [X] Jquery, Jquery-UI
 
 ## Demo
 
