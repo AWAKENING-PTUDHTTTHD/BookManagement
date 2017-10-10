@@ -1,6 +1,6 @@
-# Seminar SOLID in JAVA - *Student Enrollment System*
+# Seminar SOLID in JAVA - *Book Management*
 
-**Student Enrollment System** là một ứng dụng nhỏ áp dụng nguyên lí SOLD. Ứng dụng cho phép CRUD Student
+**Book Management** là một ứng dụng nhỏ áp dụng nguyên lí SOLD. Ứng dụng cho phép CRUD Book
 
 Thành viên:
 * [X] **1312636** Nguyễn Hoàng Quốc Trung (1312636)
