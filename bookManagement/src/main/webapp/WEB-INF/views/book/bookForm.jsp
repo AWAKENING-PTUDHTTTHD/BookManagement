@@ -34,7 +34,7 @@
 	<div class="form-group">
 		<label for="author" class="col-xs-4 control-label">Author</label>
 		<div class="col-xs-8">
-			<form:input path="author" placeholder="Author" class="form-control" />
+			<form:input path="authors" placeholder="Author" class="form-control" />
 		</div>
 	</div>
 
