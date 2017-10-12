@@ -16,49 +16,45 @@ import com.awakening.bookManagement.service.BookService;
 @Controller
 @RequestMapping("/book")
 public class BookController {
-	
+
 	@Autowired
 	private BookService bookService;
-	
-	@RequestMapping(value = { "/", "/listBooks"})
+
+	@RequestMapping(value = { "/", "/listBooks" })
 	public String listBooks(Map<String, Object> map) {
-		
+
 		map.put("book", new Book());
-		
+                
 		map.put("bookList", bookService.listBooks());
-		
+
 		return "/book/listBooks";
-		
 	}
-	
+
 	@RequestMapping("/get/{bookId}")
-	public String getBook(@PathVariable long bookId, Map<String, Object> map) {
-		
+	public String getBook(@PathVariable Long bookId, Map<String, Object> map) {
+
 		Book book = bookService.getBook(bookId);
-		
+
 		map.put("book", book);
-		
-		return "book/bookForm";
-		
-		
+
+		return "/book/bookForm";
 	}
-	
+
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
-	public String saveBook(@ModelAttribute("book") Book book, BindingResult result) {
-		
+	public String saveBook(@ModelAttribute("book") Book book,
+			BindingResult result) {
+
 		bookService.saveBook(book);
-		
+                
 		return "redirect:listBooks";
-		
 	}
-	
-	@RequestMapping("delete/{bookId}")
-	public String deleteBook(@PathVariable("bookId") long id) {
-		
-		bookService.deleBook(id);
-		
+
+	@RequestMapping("/delete/{bookId}")
+	public String deleteBook(@PathVariable("bookId") Long id) {
+
+		bookService.deleteBook(id);
+                
 		return "redirect:/book/listBooks";
-		
 	}
 }
-
+    

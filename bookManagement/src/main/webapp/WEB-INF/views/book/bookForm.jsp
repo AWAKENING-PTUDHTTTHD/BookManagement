@@ -32,9 +32,9 @@
 	</div>
 
 	<div class="form-group">
-		<label for="authors" class="col-xs-4 control-label">Author</label>
+		<label for="author" class="col-xs-4 control-label">Author</label>
 		<div class="col-xs-8">
-			<form:input path="authors" placeholder="Authors" class="form-control" />
+			<form:input path="author" placeholder="Author" class="form-control" />
 		</div>
 	</div>
 

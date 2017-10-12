@@ -15,32 +15,27 @@ public class BookServiceImpl implements BookService {
 
 	@Autowired
 	private BookDao bookDao;
-	
+
 	@Transactional
 	public void saveBook(Book book) {
-		// TODO Auto-generated method stub
 		bookDao.saveBook(book);
-
 	}
 
 	@Transactional(readOnly = true)
 	public List<Book> listBooks() {
-		// TODO Auto-generated method stub
-		return bookDao.listBook();
+		return bookDao.listBooks();
 	}
 
 	@Transactional(readOnly = true)
-	public Book getBook(long ID) {
-		// TODO Auto-generated method stub
-		return bookDao.getBook(ID);
+	public Book getBook(Long id) {
+		return bookDao.getBook(id);
 	}
 
 	@Transactional
-	public void deleBook(long ID) {
-		// TODO Auto-generated method stub
-		
-		bookDao.deleteBook(ID);
+	public void deleteBook(Long id) {
+		bookDao.deleteBook(id);
 
 	}
 
 }
+

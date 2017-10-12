@@ -18,55 +18,41 @@ public class BookDaoImpl implements BookDao {
 
 	@Autowired
 	private SessionFactory sessionFactory;
-	
+
 	public void saveBook(Book book) {
-		// TODO Auto-generated method stub
 		getSession().merge(book);
 
 	}
 
 	@SuppressWarnings("unchecked")
-	public List<Book> listBook() {
-		// TODO Auto-generated method stub
+	public List<Book> listBooks() {
+
 		return getSession().createCriteria(Book.class).list();
 	}
 
-	public Book getBook(long id) {
-		// TODO Auto-generated method stub
-		
-		return (Book)getSession().get(Book.class, id);
+	public Book getBook(Long id) {
+		return (Book) getSession().get(Book.class, id);
 	}
 
-	public void deleteBook(long id) {
-		// TODO Auto-generated method stub
+	public void deleteBook(Long id) {
+
 		Book book = getBook(id);
-		
-		if(book != null) {
-			
+
+		if (null != book) {
 			getSession().delete(book);
-			
 		}
 
 	}
-	
-	private SessionFactory getSessionFactory() {
-		
-		return sessionFactory;
-		
-	}
-	
+
 	private Session getSession() {
-		
 		Session sess = getSessionFactory().getCurrentSession();
-		
-		if(sess == null) {
-			
+		if (sess == null) {
 			sess = getSessionFactory().openSession();
-			
 		}
-		
 		return sess;
-		
 	}
 
+	private SessionFactory getSessionFactory() {
+		return sessionFactory;
+	}
 }

@@ -34,7 +34,7 @@
 
 		<property name="packagesToScan">
 			<list>
-				<value>com.awakening.bookManagement.model</value>
+				<value>np.com.mshrestha.bookstore.model</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">
